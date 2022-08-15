@@ -3,7 +3,7 @@ import Statistics from './Feedback/Statistics';
 import { Component } from 'react';
 import FeedbackOptions from './Feedback/FeedbackOptions';
 import Notification from './Feedback/Notification';
-
+import s from './Feedback/feedback.module.css';
 export class App extends Component {
   state = {
     good: 0,
@@ -40,7 +40,7 @@ export class App extends Component {
     const options = Object.keys(this.state);
 
     return (
-      <div>
+      <div className={s.block}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
