@@ -6,11 +6,7 @@ import s from './feedback.module.css';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div className={s.button__block}>
     {options.map(el => (
-      <button
-        key={nanoid()}
-        style={{ textTransform: 'capitalize' }}
-        onClick={() => onLeaveFeedback(el)}
-      >
+      <button key={nanoid()} onClick={() => onLeaveFeedback(el)}>
         {el}
       </button>
     ))}
